@@ -45,11 +45,11 @@ class Storage {
   }
 
   removeItem(itemDelete) {
-    const itemIndexDelete = this.#items.indexOf(itemDelete);
-    if (itemDelete !== -1) {
-      this.#items.splice(itemIndexDelete, 1);
+    const DeleteIndex = this.#items.indexOf(itemDelete);
+    if (DeleteIndex !== -1) {
+      this.#items.splice(DeleteIndex, 1);
     } else {
-      console.log(`Товару ${Car.maxPrice} не існує`);
+      console.log(`Товару ${itemDelete} не існує`);
     }
   }
 }
@@ -64,4 +64,7 @@ storage.removeItem("Prolonger");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 storage.removeItem("Scaner");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+storage.removeItem("ASDADASD");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
